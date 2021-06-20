@@ -3,12 +3,14 @@ import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 
 const Card = (props) => {
     return (
-        <View style={styles.inputContainer}>
+        <View style={{
+            ...styles.inputContainer,
+            ...props.style,
+        }}>
             {props.children}
         </View>
     );
-};
-
+    };
 const styles = StyleSheet.create({
     inputContainer: {
         width: 300,
